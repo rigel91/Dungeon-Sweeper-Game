@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float speed;
+    [SerializeField]
+    private float sprintSpeed;
 
     Vector3 velocity;
     [SerializeField]
@@ -48,7 +50,15 @@ public class PlayerMovement : MonoBehaviour
         {//get rid of moveing faster when moving diagonally
             move = move/move.magnitude;
         }
-        controller.Move(move * speed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.LeftShift))
+        {//sprint
+            controller.Move(move * speed * Time.deltaTime * sprintSpeed);
+        }
+        else
+        {//walk
+            controller.Move(move * speed * Time.deltaTime);
+        }
+        
 
         //move player downward by gravity
         if(Input.GetButtonDown("Jump") && isGrounded)
@@ -58,4 +68,10 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
+    //private void OnDrawGizmos()
+    //{//draw the physics sphere
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(groundCheck.position, 0.4f);
+    //}
 }

@@ -497,12 +497,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227974591}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.71, y: 2.26, z: 10.63}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.880944, y: 2.2599998, z: 9.204277}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &264337388
 PrefabInstance:
@@ -857,7 +857,7 @@ GameObject:
   - component: {fileID: 1177615644}
   m_Layer: 0
   m_Name: First Person Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -895,7 +895,7 @@ Transform:
   - {fileID: 201857612}
   - {fileID: 672243482}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1177615644
 MonoBehaviour:
@@ -910,8 +910,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jumpHeight: 2
-  gravity: -60
+  sprintSpeed: 1.6
+  jumpHeight: 4
+  gravity: -50
   groundCheck: {fileID: 672243482}
   groundDistance: 0.4
   groundMask:
@@ -1122,6 +1123,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1612519910874840017, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1612519910874840018, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
       propertyPath: target
       value: 
@@ -1132,7 +1137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1612519910874840021, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1612519910874840021, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1429,6 +1434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6708053771835348335, guid: 5699933c94ff46e408ebf24c92159976, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5699933c94ff46e408ebf24c92159976, type: 3}
 --- !u!1001 &7783766028030840485
@@ -1438,6 +1447,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1612519910874840017, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1612519910874840018, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
       propertyPath: target
       value: 
@@ -1448,7 +1461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1612519910874840021, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1612519910874840021, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1501,7 +1514,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5209220506370399955, guid: 17a8eae3cc107c5479b373c8e7acfe93, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5209220506370399955, guid: 17a8eae3cc107c5479b373c8e7acfe93, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1550,6 +1563,10 @@ PrefabInstance:
     - target: {fileID: 5209220506370399957, guid: 17a8eae3cc107c5479b373c8e7acfe93, type: 3}
       propertyPath: m_Name
       value: Red Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5209220506370399959, guid: 17a8eae3cc107c5479b373c8e7acfe93, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17a8eae3cc107c5479b373c8e7acfe93, type: 3}
