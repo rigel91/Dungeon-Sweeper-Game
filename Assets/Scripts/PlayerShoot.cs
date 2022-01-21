@@ -20,7 +20,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Instantiate(bullet, bulletSpawnPosition.position, Quaternion.identity);
+            GameObject b = Instantiate(bullet, bulletSpawnPosition.position, Quaternion.identity);
         }
-    }
+    }    
 }
