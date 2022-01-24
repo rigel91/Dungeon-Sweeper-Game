@@ -4,21 +4,36 @@ using UnityEngine;
 
 public class TileSpawner : MonoBehaviour
 {
+    //spawn in tiles
     [SerializeField]
     private GameObject parent;
     [SerializeField]
     private GameObject[] tiles;
+
+    //clue images
+    [SerializeField]
+    private GameObject clue1;
+    [SerializeField]
+    private GameObject clue2;
+    [SerializeField]
+    private GameObject clue3;
+    [SerializeField]
+    private GameObject clue4;
+
+    //row and column
     [SerializeField]
     private int xRow;
     [SerializeField]
     private int zRow;
 
+    //list for guesses and total list
     private List<int> finalList = new List<int>();
     private List<int> playerList = new List<int>();
 
     // Start is called before the first frame update
     void Start()
     {
+        ClearClues();
         GenerateSequence();
     }
 
@@ -70,7 +85,27 @@ public class TileSpawner : MonoBehaviour
     private void CheckPlayerSequence()
     {
         if (playerList.Count == finalList.Count)
-        {            
+        {
+            //checks to see if the guesses are in the correct spot or is contained
+            List<string> clueList = new List<string>();
+            for (int i = 0; i < finalList.Count; i++)
+            {
+                if (playerList[i] == finalList[i])
+                {
+                    clueList.Add("Correct position");
+                }
+                else if (playerList[i] != finalList[i] && finalList.Contains(playerList[i]))
+                {
+                    clueList.Add("Contains but not same position");
+                }
+            }            
+            for (int i = 0; i < clueList.Count; i++)
+            {
+                Debug.Log(clueList[i].ToString());
+            }
+            clueList.Clear();
+
+            //compares the lists and checks to see if player is winner or not
             for (int i = 0; i < finalList.Count; i++)
             {
                 if (playerList[i] != finalList[i])
@@ -84,6 +119,14 @@ public class TileSpawner : MonoBehaviour
             playerList.Clear();
             return;
         }       
+    }
+
+    private void ClearClues()
+    {
+        clue1.SetActive(false);
+        clue2.SetActive(false);
+        clue3.SetActive(false);
+        clue4.SetActive(false);
     }
 
     private void SpawnTiles()
