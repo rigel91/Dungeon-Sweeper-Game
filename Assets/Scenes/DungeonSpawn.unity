@@ -1124,6 +1124,10 @@ MonoBehaviour:
   - {fileID: 3426673742087459687, guid: 0b00c98e66c63804a861b7531fb6d387, type: 3}
   - {fileID: 6381694242801813365, guid: 21aae470f2d088f4e97e6e43bd914c3d, type: 3}
   - {fileID: 5308930172872805601, guid: 807c96598135dc74cb2663ec8591e8cc, type: 3}
+  clue1: {fileID: 1289184811}
+  clue2: {fileID: 1008117661}
+  clue3: {fileID: 1757801480}
+  clue4: {fileID: 801020148}
   xRow: 10
   zRow: 10
 --- !u!1 &1289184811
