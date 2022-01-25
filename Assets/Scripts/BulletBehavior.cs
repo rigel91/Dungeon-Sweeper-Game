@@ -5,7 +5,10 @@ using UnityEngine;
 public class BulletBehavior : MonoBehaviour
 {
     [SerializeField]
-    private int bulletSpeed;    
+    private int bulletSpeed;
+    [SerializeField]
+    private int damagePerBullet;
+
     private Rigidbody rb;
 
     // Start is called before the first frame update
@@ -25,6 +28,12 @@ public class BulletBehavior : MonoBehaviour
     {
         if (other.tag == "Wall")
         {
+            Destroy(this.gameObject);
+        }
+
+        if (other.tag == "Enemy")
+        {
+            other.GetComponent<EnemyHealth>().TakeDamage(damagePerBullet);
             Destroy(this.gameObject);
         }
     }
