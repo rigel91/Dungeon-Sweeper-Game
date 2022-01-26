@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TileSpawner : MonoBehaviour
 {
@@ -11,14 +12,16 @@ public class TileSpawner : MonoBehaviour
     private GameObject[] tiles;
 
     //clue images
+    //[SerializeField]
+    //private GameObject clue1;
+    //[SerializeField]
+    //private GameObject clue2;
+    //[SerializeField]
+    //private GameObject clue3;
+    //[SerializeField]
+    //private GameObject clue4;
     [SerializeField]
-    private GameObject clue1;
-    [SerializeField]
-    private GameObject clue2;
-    [SerializeField]
-    private GameObject clue3;
-    [SerializeField]
-    private GameObject clue4;
+    private GameObject[] clueImages;
 
     //row and column
     [SerializeField]
@@ -82,10 +85,24 @@ public class TileSpawner : MonoBehaviour
         playerList.Add(3);
     }
 
+    public void CyanButton()
+    {
+        Debug.Log("Cyan: 4");
+        playerList.Add(4);
+    }
+    public void PurpleButton()
+    {
+        Debug.Log("Purple: 5");
+        playerList.Add(5);
+    }
+
     private void CheckPlayerSequence()
     {
         if (playerList.Count == finalList.Count)
         {
+            //refreshes the clue images
+            ClearClues();
+            
             //checks to see if the guesses are in the correct spot or is contained
             List<string> clueList = new List<string>();
             for (int i = 0; i < finalList.Count; i++)
@@ -98,10 +115,20 @@ public class TileSpawner : MonoBehaviour
                 {
                     clueList.Add("Contains but not same position");
                 }
-            }            
+            }
             for (int i = 0; i < clueList.Count; i++)
             {
                 Debug.Log(clueList[i].ToString());
+                if (clueList[i].ToString() == "Correct position")
+                {
+                    clueImages[i].SetActive(true);
+                    clueImages[i].GetComponent<Image>().color = Color.black;
+                }
+                else if (clueList[i].ToString() == "Contains but not same position")
+                {
+                    clueImages[i].SetActive(true);
+                    clueImages[i].GetComponent<Image>().color = Color.white;
+                }
             }
             clueList.Clear();
 
@@ -123,10 +150,10 @@ public class TileSpawner : MonoBehaviour
 
     private void ClearClues()
     {
-        clue1.SetActive(false);
-        clue2.SetActive(false);
-        clue3.SetActive(false);
-        clue4.SetActive(false);
+        foreach (GameObject clue in clueImages)
+        {
+            clue.SetActive(false);
+        }
     }
 
     private void SpawnTiles()
