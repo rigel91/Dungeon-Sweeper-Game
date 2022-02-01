@@ -5,12 +5,23 @@ using UnityEngine.EventSystems;
 
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
+    private UICraft craftTable;
+
+    private void Start()
+    {
+        craftTable = GetComponentInParent<UICraft>();
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag != null)
+        if (eventData.pointerDrag != null && craftTable.table.Count < 5)
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            Debug.Log(eventData.pointerDrag.gameObject.name);
+
+            //Add item to list
+            craftTable.AddItem(eventData.pointerDrag.gameObject);
+
+            //Debug.Log(eventData.pointerDrag.gameObject.name);
         }
     }
 }
