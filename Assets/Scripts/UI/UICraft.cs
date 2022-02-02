@@ -4,7 +4,25 @@ using UnityEngine;
 
 public class UICraft : MonoBehaviour
 {
+    //make this class a Singleton since we only need one of this object
+    private static UICraft _instance;
+    public static UICraft Instance { get { return _instance; } }
+    
+    //list of gameobjects to craft
     public List<GameObject> table = new List<GameObject>();
+
+    private void Awake()
+    {
+        //Singleton, or destroy object if more than one
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
 
 
     private void Update()
@@ -14,13 +32,7 @@ public class UICraft : MonoBehaviour
 
     private void CheckForCraftableItem()
     {
-        foreach (GameObject obj in table)
-        {
-            if (obj.name == "Image")
-            {
-                //Debug.Log("Crafted");
-            }
-        }
+        
     }
 
     public void AddItem(GameObject item)

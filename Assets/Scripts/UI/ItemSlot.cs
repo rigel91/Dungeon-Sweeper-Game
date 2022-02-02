@@ -16,7 +16,11 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     {
         if (eventData.pointerDrag != null && craftTable.table.Count < 5)
         {
+            //move object with cursor
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            
+            //set crafting to true since we placed an item on the slot
+            eventData.pointerDrag.GetComponent<DragItem>().isCrafting = true;
 
             //Add item to list
             craftTable.AddItem(eventData.pointerDrag.gameObject);

@@ -12,11 +12,15 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     private Image image;
     private RectTransform rect;
 
+    public bool isCrafting;
+
     private void Awake()
     {
         image = GetComponent<Image>();
         rect = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+
+        isCrafting = false;
     }
 
     //IBeginDragHandler, start to drag something
@@ -32,6 +36,13 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     {
         //transform.position = eventData.position;
         rect.anchoredPosition += eventData.delta / canvas.scaleFactor;
+
+        //if we are crafting then remove item
+        if(isCrafting)
+        {
+            isCrafting = !isCrafting;
+            UICraft.Instance.RemoveItem(eventData.pointerDrag.gameObject);
+        }
     }
 
     //IEndDragHandler, stop dragging something
