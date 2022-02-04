@@ -6,10 +6,14 @@ using UnityEngine.UI;
 
 public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IDropHandler//, IPointerDownHandler
 {
-    [SerializeField] private Canvas canvas;
-    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] 
+    private Canvas canvas;
+    private CanvasGroup canvasGroup;
 
     private Image image;
+    [SerializeField]
+    private ItemInfo itemInfo;
+
     private RectTransform rect;
 
     public bool isCrafting;
@@ -17,6 +21,8 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     private void Awake()
     {
         image = GetComponent<Image>();
+        image.color = itemInfo.itemColor;
+        
         rect = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
 
