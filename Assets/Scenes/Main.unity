@@ -1018,7 +1018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0887360c065c439409bd9aefd8dc07a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySO: {fileID: 11400000, guid: ebe211d381c13d34f981b494c1d28f6a, type: 2}
+  enemySO: {fileID: 11400000, guid: 339994f2850ed2940b52a82d364965a6, type: 2}
   target: {fileID: 227974595}
 --- !u!1 &1459097367
 GameObject:
@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0887360c065c439409bd9aefd8dc07a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySO: {fileID: 11400000, guid: ebe211d381c13d34f981b494c1d28f6a, type: 2}
+  enemySO: {fileID: 11400000, guid: 339994f2850ed2940b52a82d364965a6, type: 2}
   target: {fileID: 227974595}
 --- !u!1001 &7783766028030840485
 PrefabInstance:
@@ -1636,7 +1636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0887360c065c439409bd9aefd8dc07a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySO: {fileID: 11400000, guid: ebe211d381c13d34f981b494c1d28f6a, type: 2}
+  enemySO: {fileID: 11400000, guid: 339994f2850ed2940b52a82d364965a6, type: 2}
   target: {fileID: 227974595}
 --- !u!1001 &8190821467392901199
 PrefabInstance:
@@ -1725,5 +1725,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0887360c065c439409bd9aefd8dc07a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySO: {fileID: 11400000, guid: ebe211d381c13d34f981b494c1d28f6a, type: 2}
+  enemySO: {fileID: 11400000, guid: 339994f2850ed2940b52a82d364965a6, type: 2}
   target: {fileID: 227974595}

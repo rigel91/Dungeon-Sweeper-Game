@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16054b4af95fd5649932ab5b80666e33, type: 3}
+  m_Script: {fileID: 11500000, guid: 38960badd2bbc9b43bb87cd12ef26256, type: 3}
   m_Name: Earth
   m_EditorClassIdentifier: 
   itemName: Earth
-  itemColor: {r: 1, g: 0.5400758, b: 0, a: 1}
+  type: 0
+  description: Ive got a jar of dirt!
+  itemColor: {r: 0.8018868, g: 0.33825943, b: 0, a: 1}

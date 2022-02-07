@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38960badd2bbc9b43bb87cd12ef26256, type: 3}
-  m_Name: Water
+  m_Script: {fileID: 11500000, guid: e9ffad8315dd1c941b4bb0bfe3f892f1, type: 3}
+  m_Name: Enemy
   m_EditorClassIdentifier: 
-  itemName: Water
-  type: 0
-  description: Wet!
-  itemColor: {r: 0, g: 0.05725074, b: 1, a: 1}
+  health: 100
+  speed: 10

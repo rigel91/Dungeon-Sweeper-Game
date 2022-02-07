@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9ffad8315dd1c941b4bb0bfe3f892f1, type: 3}
-  m_Name: Enemy1
+  m_Script: {fileID: 11500000, guid: 642d169ca102a004781c84ac97674fb5, type: 3}
+  m_Name: Shield
   m_EditorClassIdentifier: 
-  health: 100
-  speed: 20
-  color: {r: 0, g: 0.057250977, b: 1, a: 1}
+  itemName: Shield
+  itemColor: {r: 0, g: 0, b: 0, a: 1}
+  type: 1
+  description: To protect yourself.

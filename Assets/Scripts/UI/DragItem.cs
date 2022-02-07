@@ -11,8 +11,9 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     private CanvasGroup canvasGroup;
 
     private Image image;
-    [SerializeField]
-    private ItemInfo itemInfo;
+
+    //private ItemInfoScriptableObject itemInfo;
+    public ItemInfoScriptableObject item;
 
     private RectTransform rect;
 
@@ -21,7 +22,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     private void Awake()
     {
         image = GetComponent<Image>();
-        image.color = itemInfo.itemColor;
+        image.color = item.itemColor;
         
         rect = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
@@ -32,7 +33,6 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     //IBeginDragHandler, start to drag something
     public void OnBeginDrag(PointerEventData eventData)
     {
-        //image.color = Color.blue;
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
     }
@@ -47,7 +47,7 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         if(isCrafting)
         {
             isCrafting = !isCrafting;
-            UICraft.Instance.RemoveItem(eventData.pointerDrag.gameObject);
+            UICraft.Instance.RemoveItem(item);
         }
     }
 

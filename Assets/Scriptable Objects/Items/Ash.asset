@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38960badd2bbc9b43bb87cd12ef26256, type: 3}
-  m_Name: Water
+  m_Script: {fileID: 11500000, guid: 15498616e9688064fbdff28a33da0a79, type: 3}
+  m_Name: Ash
   m_EditorClassIdentifier: 
-  itemName: Water
-  type: 0
-  description: Wet!
-  itemColor: {r: 0, g: 0.05725074, b: 1, a: 1}
+  itemName: Ash
+  itemColor: {r: 1, g: 1, b: 1, a: 1}
+  type: 2
+  description: The ashes of whats left over.

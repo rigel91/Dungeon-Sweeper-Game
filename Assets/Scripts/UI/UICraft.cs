@@ -9,7 +9,7 @@ public class UICraft : MonoBehaviour
     public static UICraft Instance { get { return _instance; } }
     
     //list of gameobjects to craft
-    public List<GameObject> table = new List<GameObject>();
+    public List<ItemInfoScriptableObject> table = new List<ItemInfoScriptableObject>();
 
     private void Awake()
     {
@@ -35,7 +35,7 @@ public class UICraft : MonoBehaviour
         
     }
 
-    public void AddItem(GameObject item)
+    public void AddItem(ItemInfoScriptableObject item)
     {
         if (table.Count >= 5)
         {
@@ -43,14 +43,14 @@ public class UICraft : MonoBehaviour
         }
         else
         {
-            Debug.Log(item.gameObject.name);
+            Debug.Log(item.itemName);
             table.Add(item);
         }        
     }
 
-    public void RemoveItem(GameObject item)
+    public void RemoveItem(ItemInfoScriptableObject item)
     {
         table.Remove(item);
-        Debug.Log("Remove " + item.name + " from list");
+        Debug.Log("Remove " + item.itemName + " from list");
     }
 }

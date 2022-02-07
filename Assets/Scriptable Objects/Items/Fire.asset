@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16054b4af95fd5649932ab5b80666e33, type: 3}
+  m_Script: {fileID: 11500000, guid: 38960badd2bbc9b43bb87cd12ef26256, type: 3}
   m_Name: Fire
   m_EditorClassIdentifier: 
   itemName: Fire
+  type: 0
+  description: Hot!
   itemColor: {r: 1, g: 0, b: 0, a: 1}

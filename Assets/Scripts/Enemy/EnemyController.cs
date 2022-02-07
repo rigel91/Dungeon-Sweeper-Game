@@ -19,6 +19,7 @@ public class EnemyController : MonoBehaviour
         health = enemySO.health;
 
         agent = GetComponent<NavMeshAgent>();
+        agent.speed = enemySO.speed;
     }
 
     // Update is called once per frame

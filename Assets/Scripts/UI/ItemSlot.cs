@@ -23,7 +23,8 @@ public class ItemSlot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<DragItem>().isCrafting = true;
 
             //Add item to list
-            craftTable.AddItem(eventData.pointerDrag.gameObject);
+            ItemInfoScriptableObject tempItem = eventData.pointerDrag.GetComponent<DragItem>().item;
+            craftTable.AddItem(tempItem);
 
             //Debug.Log(eventData.pointerDrag.gameObject.name);
         }
