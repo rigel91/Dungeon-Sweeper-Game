@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   itemName: Fire
-  itemColor: {r: 1, g: 0, b: 0, a: 0}
+  itemColor: {r: 1, g: 0, b: 0, a: 1}

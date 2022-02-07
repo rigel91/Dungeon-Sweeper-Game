@@ -998,7 +998,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8754e9dfbc974984ba4e1de449575642, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1612519910874840018, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
 --- !u!1 &1433023804 stripped
 GameObject:
@@ -1014,10 +1015,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1433023804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52043d8151812974a9aad6e03d9710aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 0887360c065c439409bd9aefd8dc07a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  enemySO: {fileID: 11400000, guid: ebe211d381c13d34f981b494c1d28f6a, type: 2}
+  target: {fileID: 227974595}
 --- !u!1 &1459097367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,7 +1527,8 @@ PrefabInstance:
       propertyPath: m_StoppingDistance
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6708053771835348332, guid: 5699933c94ff46e408ebf24c92159976, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5699933c94ff46e408ebf24c92159976, type: 3}
 --- !u!1 &6708053772135293518 stripped
 GameObject:
@@ -1541,10 +1544,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6708053772135293518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52043d8151812974a9aad6e03d9710aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 0887360c065c439409bd9aefd8dc07a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  enemySO: {fileID: 11400000, guid: ebe211d381c13d34f981b494c1d28f6a, type: 2}
+  target: {fileID: 227974595}
 --- !u!1001 &7783766028030840485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1612,7 +1616,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1612519910874840018, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 71ab05ebc11ff4f4cb8807cc0623f47c, type: 3}
 --- !u!1 &7783766028030840486 stripped
 GameObject:
@@ -1628,10 +1633,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7783766028030840486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52043d8151812974a9aad6e03d9710aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 0887360c065c439409bd9aefd8dc07a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  enemySO: {fileID: 11400000, guid: ebe211d381c13d34f981b494c1d28f6a, type: 2}
+  target: {fileID: 227974595}
 --- !u!1001 &8190821467392901199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1699,7 +1705,8 @@ PrefabInstance:
       propertyPath: m_StoppingDistance
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5209220506370399956, guid: 17a8eae3cc107c5479b373c8e7acfe93, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 17a8eae3cc107c5479b373c8e7acfe93, type: 3}
 --- !u!1 &8190821467392901200 stripped
 GameObject:
@@ -1715,7 +1722,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8190821467392901200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52043d8151812974a9aad6e03d9710aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 0887360c065c439409bd9aefd8dc07a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  enemySO: {fileID: 11400000, guid: ebe211d381c13d34f981b494c1d28f6a, type: 2}
+  target: {fileID: 227974595}

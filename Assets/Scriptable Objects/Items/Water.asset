@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   itemName: Water
-  itemColor: {r: 0, g: 0.08237791, b: 1, a: 0}
+  itemColor: {r: 0, g: 0.15721345, b: 1, a: 1}
