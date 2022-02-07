@@ -33,7 +33,7 @@ public class BulletBehavior : MonoBehaviour
 
         if (other.tag == "Enemy")
         {
-            other.GetComponent<EnemyHealth>().TakeDamage(damagePerBullet);
+            other.GetComponent<EnemyController>().TakeDamage(damagePerBullet);
             Destroy(this.gameObject);
         }
     }
