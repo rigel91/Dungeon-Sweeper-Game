@@ -7,8 +7,11 @@ public class UICraft : MonoBehaviour
     //make this class a Singleton since we only need one of this object
     private static UICraft _instance;
     public static UICraft Instance { get { return _instance; } }
-    
-    //list of gameobjects to craft
+
+    //list of all items to craft
+    public List<GameObject> listOfAllItems = new List<GameObject>();
+
+    //list of gameobjects that are in the crafting table
     public List<ItemInfoScriptableObject> table = new List<ItemInfoScriptableObject>();
 
     private void Awake()
@@ -22,6 +25,9 @@ public class UICraft : MonoBehaviour
         {
             _instance = this;
         }
+
+        //spawn in all available items
+        InstantiateListOfItems();
     }
 
 
@@ -30,9 +36,14 @@ public class UICraft : MonoBehaviour
         CheckForCraftableItem();
     }
 
+    private void InstantiateListOfItems()
+    {
+
+    }
+
     private void CheckForCraftableItem()
     {
-        
+
     }
 
     public void AddItem(ItemInfoScriptableObject item)

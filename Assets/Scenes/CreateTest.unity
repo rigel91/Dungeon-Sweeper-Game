@@ -1511,6 +1511,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2474ea6d33b2a4a47923118279a1bf27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listOfAllItems:
+  - {fileID: 1538926509}
+  - {fileID: 311523248}
+  - {fileID: 912879793}
+  - {fileID: 1121057043}
   table: []
 --- !u!1 &1518964412
 GameObject:
